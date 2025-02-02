@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鹤壁音响城</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .navbar {
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+
+      .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .nav-links a {
+        margin: 0 15px;
+        color: #888;
+        text-decoration: none;
+      }
+
+      .nav-links a:hover {
+        color: #000;
+      }
+
+      .search-form {
+        display: flex;
+        align-items: center;
+      }
+
+      .search-form input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: box-shadow 0.3s;
+      }
+
+      .search-form input:focus {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .search-form button {
+        padding: 5px 10px;
+        margin-left: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .search-form button:focus {
+        background-color: #ddd;
+      }
+
+      .focus-image {
+        background: linear-gradient(to right, #007bff, #28a745);
+        color: #fff;
+        text-align: center;
+        padding: 50px 20px;
+        margin-top: 60px; /* Adjust for fixed navbar height */
+      }
+
+      .focus-title {
+        font-family: serif;
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      .focus-text {
+        font-size: 24px;
+      }
+
+      .main-content {
+        padding: 50px 0;
+      }
+
+      .main-content h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2em;
+        color: #333;
+        animation: titleAnimation 5s infinite;
+      }
+
+      @keyframes titleAnimation {
+        0%,
+        100% {
+          font-size: 2em;
+          color: #333;
+        }
+        50% {
+          font-size: 2.2em;
+          color: #007bff;
+        }
+      }
+
+      .service-cards {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .service-card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 10px;
+        width: calc(25% - 20px);
+        box-sizing: border-box;
+        text-align: center;
+        transition: transform 0.3s, border-color 0.3s;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        border-color: #007bff;
+      }
+
+      .service-card img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .service-card h3 {
+        margin: 15px 0 10px;
+        font-size: 20px;
+      }
+
+      .service-card p {
+        margin: 5px 0;
+        color: #555;
+      }
+
+      .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      @media (max-width: 1200px) {
+        .service-card {
+          width: calc(33.333% - 20px);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .service-card {
+          width: calc(50% - 20px);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .service-card {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="logo"><img src="logo.jpg" / width="200px"></div>
+        <nav class="nav-links">网站首页 企业业务 企业简介 最新动态</nav>
+      </div>
+    </header>
+
+    <section class="focus-image">
+      <div class="focus-content">
+        <h1 class="focus-title">鹤壁音响城</h1>
+        <p class="focus-text">
+          致力于用信息化助力全业务链<br />
+          综合的系统架构服务构筑专注于数据中心建设
+        </p>
+      </div>
+    </section>
+
+    <section class="main-content">
+      <div class="container">
+        <h2>优质业务</h2>
+        <div class="service-cards">
+          <div class="service-card">
+            < img src="infrastructure.png" alt="Infrastructure">
+            <h3>Infrastructure</h3>
+            <p>基础架构服务</p>
+            <p>
+              Feng基础架构服务涵盖物理架构和虚拟架构，可提供灵活的部署方案，满足不同业务需求。
+            </p>
+          </div>
+          <div class="service-card">
+            < img src="cloud-security.png" alt="Cloud Security">
+            <h3>Cloud Security</h3>
+            <p>数据安全全领域服务</p>
+            <p>
+              Feng提供全面的安全方案与服务，无论网络还是数据的安全都可以得到保障。
+            </p>
+          </div>
+          <div class="service-card">
+            < img src="hardware-equipment.png" alt="Hardware Equipment">
+            <h3>Hardware Equipment</h3>
+            <p>硬件设备租赁服务</p>
+            <p>
+              Feng以租代购为核心模式提供硬件设备租赁服务，同时提供灵活的租赁方案。
+            </p>
+          </div>
+          <div class="service-card">
+            < img src="hardware-equipment.png" alt="Hardware Equipment">
+            <h3>Hardware Equipment</h3>
+            <p>硬件设备租赁服务</p>
+            <p>
+              Feng以租代购为核心模式提供硬件设备租赁服务，同时提供灵活的租赁方案。
+            </p>
+          </div>
+          <div class="service-card">
+            < img src="database.png" alt="Database">
+            <h3>Database</h3>
+            <p>数据库优化服务</p>
+            <p>
+              Feng是Oracle Gold
+              Partner，在数据库优化方面具备丰富的实践经验，同时提供ODA产品。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 归鹤壁音响城所属</p>
+      </div>
+    </footer>
+  </body>
+</html>
